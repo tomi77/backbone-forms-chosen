@@ -1,7 +1,7 @@
 {
   "name": "backbone-forms-chosen",
   "description": "Backbone-Forms chosen editor",
-  "main": "dist/chosen.js",
+  "main": "bbf-chosen.js",
   "keywords": [
     "backbone-forms",
     "chosen"

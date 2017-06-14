@@ -13,14 +13,15 @@
   },
   "scripts": {
     "build": "npm run build-js; npm run uglify",
-    "build-js": "coffee --bare --compile --no-header --output dist src/bbf-chosen.coffee",
-    "uglify": "uglifyjs dist/bbf-chosen.js --output dist/bbf-chosen.min.js --compress --mangle",
-    "build-docs": "pug --out docs templates/*.pug; cp dist/bbf-chosen.js docs/"
+    "build-js": "coffee --bare --compile --no-header --output . src/bbf-chosen.coffee",
+    "uglify": "uglifyjs bbf-chosen.js --output bbf-chosen.min.js --compress --mangle",
+    "build-docs": "pug --out docs templates/*.pug; cp bbf-chosen.js docs/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tomi77/backbone-forms-chosen.git"
   },
+  "main": "bbf-chosen.js",
   "author": "Tomasz Jakub Rup",
   "license": "MIT",
   "bugs": {
