@@ -40,7 +40,6 @@ jspm_packages
 
 test
 .*
-codeclimate.yml
 coffeelint.json
 src
 docs
