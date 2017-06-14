@@ -9,7 +9,7 @@
     "coffee-script": "^1.10.0",
     "pug": "^2.0.0-rc.2",
     "pug-cli": "^1.0.0-alpha6",
-    "uglify-js": "^2.7.0"
+    "uglify-js": "^3.0.16"
   },
   "scripts": {
     "build": "npm run build-js; npm run uglify",
