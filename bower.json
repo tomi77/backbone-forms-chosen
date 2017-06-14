@@ -1,0 +1,25 @@
+{
+  "name": "backbone-forms-chosen",
+  "description": "Backbone-Forms chosen editor",
+  "main": "dist/chosen.js",
+  "keywords": [
+    "backbone-forms",
+    "chosen"
+  ],
+  "authors": [
+    "Tomasz Jakub Rup"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/tomi77/backbone-forms-chosens",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone-forms": "^0.14.1",
+    "chosen": "^1.7.0"
+  }
+}

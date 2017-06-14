@@ -1,0 +1,30 @@
+{
+  "name": "backbone-forms-chosen",
+  "description": "Backbone-Forms chosen editor",
+  "dependencies": {
+    "backbone-forms": "^0.14.1",
+    "chosen-js": "^1.7.0"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.10.0",
+    "pug": "^2.0.0-rc.2",
+    "pug-cli": "^1.0.0-alpha6",
+    "uglify-js": "^2.7.0"
+  },
+  "scripts": {
+    "build": "npm run build-js; npm run uglify",
+    "build-js": "coffee --bare --compile --no-header --output dist src/bbf-chosen.coffee",
+    "uglify": "uglifyjs dist/bbf-chosen.js --output dist/bbf-chosen.min.js --compress --mangle",
+    "build-docs": "pug --out docs templates/*.pug; cp dist/bbf-chosen.js docs/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomi77/backbone-forms-chosen.git"
+  },
+  "author": "Tomasz Jakub Rup",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomi77/backbone-forms-chosen/issues"
+  },
+  "homepage": "https://github.com/tomi77/backbone-forms-chosen#README.md"
+}
