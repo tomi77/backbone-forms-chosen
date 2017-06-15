@@ -15,7 +15,7 @@
     "build": "npm run build-js; npm run uglify",
     "build-js": "coffee --bare --compile --no-header --output . src/bbf-chosen.coffee",
     "uglify": "uglifyjs bbf-chosen.js --output bbf-chosen.min.js --compress --mangle",
-    "build-docs": "pug --out docs templates/*.pug; cp bbf-chosen.js docs/"
+    "build-docs": "pug --out docs demo/*.pug; coffee --bare --compile --no-header --output docs/ demo/index.coffee src/bbf-chosen.coffee"
   },
   "repository": {
     "type": "git",
