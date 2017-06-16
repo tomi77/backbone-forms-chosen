@@ -18,11 +18,14 @@
     "src",
     "docs",
     "demo",
-    "test",
-    "tests"
+    "spec"
   ],
   "dependencies": {
     "backbone-forms": "^0.14.1",
     "chosen": "^1.7.0"
+  },
+  "devDependencies": {
+    "underscore": "^1.8.3",
+    "jquery": "^3.2.1"
   }
 }
