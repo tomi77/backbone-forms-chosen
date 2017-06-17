@@ -45,7 +45,7 @@ module.exports = (config) ->
 
 
     coverageReporter:
-      type: 'lcovonly'
+      type: 'lcov'
       dir: 'coverage'
       subdir: '.'
 

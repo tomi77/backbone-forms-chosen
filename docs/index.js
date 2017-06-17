@@ -12,15 +12,32 @@ demo = function() {
         editorAttrs: {
           multiple: 'multiple',
           'data-placeholder': 'Select countries...'
+        },
+        editorOptions: {
+          width: '100%'
         }
       }
     }
   });
-  model = new Model();
+  model = new Model({
+    states: ['Alabama']
+  });
   form = new Backbone.Form({
     model: model
   });
   $('#form').html(form.render().$el);
+  form.on('focus', function() {
+    $('.focus').removeClass('hidden');
+    $('.blur').addClass('hidden');
+  }).on('blur', function() {
+    $('.blur').removeClass('hidden');
+    $('.focus').addClass('hidden');
+  }).on('change', function(form) {
+    states = form.getValue('states').map(function(state) {
+      return "<span class=\"label label-primary\">" + state + "</span>";
+    });
+    $('.change').html(states.join('&nbsp;'));
+  });
 };
 
 document.addEventListener("DOMContentLoaded", demo, false);

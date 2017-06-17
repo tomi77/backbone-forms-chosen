@@ -26,6 +26,17 @@
   var Select;
   Select = Form.editors.Select;
   Form.editors['chosen'] = Select.extend({
+    events: {
+      'change': function(event) {
+        this.trigger('change', this);
+      },
+      'chosen:showing_dropdown': function(event) {
+        this.trigger('focus', this);
+      },
+      'chosen:hiding_dropdown': function(event) {
+        this.trigger('blur', this);
+      }
+    },
     initialize: function(options) {
       var base, el;
       Select.prototype.initialize.call(this, options);
@@ -49,6 +60,12 @@
       html = this._getOptionsHtml(options);
       $select.html(html);
       this.setValue(this.value);
+    },
+    getValue: function() {
+      return this.$('select').val();
+    },
+    setValue: function(value) {
+      this.$('select').val(value);
     }
   });
 });

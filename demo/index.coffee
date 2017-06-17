@@ -19,10 +19,24 @@ demo = () ->
         editorAttrs:
           multiple: 'multiple'
           'data-placeholder': 'Select countries...'
+        editorOptions:
+          width: '100%'
 
-  model = new Model()
+  model = new Model({states: ['Alabama']})
   form = new Backbone.Form model: model
   $('#form').html(form.render().$el)
+  form.on 'focus', () ->
+    $('.focus').removeClass('hidden')
+    $('.blur').addClass('hidden')
+    return
+  .on 'blur', () ->
+    $('.blur').removeClass('hidden')
+    $('.focus').addClass('hidden')
+    return
+  .on 'change', (form) ->
+    states = form.getValue('states').map (state) -> "<span class=\"label label-primary\">#{state}</span>"
+    $('.change').html(states.join('&nbsp;'))
+    return
   return
 
 document.addEventListener("DOMContentLoaded", demo, false)

@@ -1,7 +1,7 @@
 ###
   Backbone-Forms chosen editor 1.0.0
 
-  Copyright (c) 2016 Tomasz Jakub Rup
+  Copyright (c) 2017 Tomasz Jakub Rup
 
   https://github.com/tomi77/backbone-forms-chosen
 
@@ -23,6 +23,17 @@
   Select = Form.editors.Select
 
   Form.editors['chosen'] = Select.extend
+    events:
+      'change': (event) ->
+        @trigger('change', @)
+        return
+      'chosen:showing_dropdown': (event) ->
+        @trigger('focus', @)
+        return
+      'chosen:hiding_dropdown': (event) ->
+        @trigger('blur', @)
+        return
+
     initialize: (options) ->
       Select::initialize.call @, options
 
@@ -54,6 +65,12 @@
       # Select correct option
       @setValue(@value)
 
+      return
+
+    getValue: () -> @$('select').val()
+
+    setValue: (value) ->
+      @$('select').val(value)
       return
 
   return
