@@ -7,7 +7,6 @@
 [![devDependencies Status](https://david-dm.org/tomi77/backbone-forms-chosen/dev-status.svg)](https://david-dm.org/tomi77/backbone-forms-chosen?type=dev)
 ![Downloads](https://img.shields.io/npm/dt/backbone-forms-chosen.svg)
 
-
 A [Backbone-Forms](https://github.com/powmedia/backbone-forms) editor that covers [Chosen](https://harvesthq.github.io/chosen/) functionality.
 
 ## Installation
@@ -26,37 +25,41 @@ npm install backbone-forms-chosen
 
 ## Usage
 
+Just replace ``Select`` editor type with ``chosen``.
+
+### Change placeholder
+
+Add ``data-placeholder`` to ``editorAttrs``.
+
 ~~~js
-var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
-    'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
-    'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
-    'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
-    'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
-    'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
-    'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
-    'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
-    'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
-];
-var Model = Backbone.Model.extend({
-    schema: {
-        states: {
-            type: 'chosen',
-            title: 'States',
-            options: states,
-            editorAttrs: {
-                multiple: 'multiple',
-                'data-placeholder': 'Select countries...'
-            },
-            editorOptions: {
-            }
-        }
+schema: {
+  states: {
+    type: 'chosen',
+    title: 'States',
+    options: states,
+    editorAttrs: {
+      multiple: 'multiple',
+      'data-placeholder': 'Select countries...'
     }
-});
-var model = new Model();
-var form = new Backbone.Form({
-    model: model
-});
-$('#form').html(form.render().$el);
+  }
+}
+~~~
+
+### Add extra chosen editor options
+
+Add ``editorOptions`` to schema.
+
+~~~js
+schema: {
+  states: {
+    type: 'chosen',
+    title: 'States',
+    options: states,
+    editorOptions: {
+      no_results_text: 'Oops, nothing found!'
+    }
+  }
+}
 ~~~
 
 ## Demo
