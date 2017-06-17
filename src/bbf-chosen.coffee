@@ -27,15 +27,33 @@
       Select::initialize.call @, options
 
       @editorOptions = options.schema.editorOptions or {}
+
+      el = @$el
+      @$el = Backbone.$('<div>')
+      @el = @$el[0]
+      @$el.html(el)
+
+      @editorOptions.width ?= el.css('width')
+
       return
 
     render: () ->
       Select::render.call @
 
-      f = () =>
-        @$el.chosen @editorOptions
-        return
-      _.delay f, @schema.delay or 100
+      @$('select').chosen @editorOptions
       @
+
+    renderOptions: (options) ->
+      $select = @$('select')
+
+      html = @_getOptionsHtml(options)
+
+      # Insert options
+      $select.html(html)
+
+      # Select correct option
+      @setValue(@value)
+
+      return
 
   return

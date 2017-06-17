@@ -20,15 +20,12 @@ Model = Backbone.Model.extend
         'data-placeholder': 'Select countries...'
 
 describe 'A Chosen editor', () ->
-  it 'should render a chosen select box', (done) ->
+  it 'should render a chosen select box', () ->
     model = new Model()
     form = new Backbone.Form model: model
     $('body').html(form.render().$el)
 
-    setTimeout () ->
-      expect($('.chosen-container').length).to.equal(1)
-      done()
-    , 200
+    expect($('.chosen-container').length).to.equal(1)
     return
 
   return
