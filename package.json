@@ -9,6 +9,7 @@
     "chai": "^4.0.2",
     "coffee-script": "^1.10.0",
     "coveralls": "^2.13.1",
+    "cucumber": "^2.3.1",
     "karma": "^1.7.0",
     "karma-chai": "^0.1.0",
     "karma-coffee-preprocessor": "^1.0.1",
@@ -18,10 +19,12 @@
     "mocha": "^3.4.2",
     "pug": "^2.0.0-rc.2",
     "pug-cli": "^1.0.0-alpha6",
+    "selenium-webdriver": "^3.4.0",
     "uglify-js": "^3.0.16"
   },
   "scripts": {
-    "test": "karma start",
+    "test": "karma start && npm run cucumber",
+    "cucumber": "cucumber.js --compiler coffee:coffee-script/register",
     "coveralls": "npm test && cat ./coverage/lcov.info | coveralls",
     "build": "npm run build-js; npm run uglify",
     "build-js": "coffee --bare --compile --no-header --output . src/bbf-chosen.coffee",
