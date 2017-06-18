@@ -2,7 +2,7 @@
 /*
   Backbone-Forms chosen editor 1.0.0
 
-  Copyright (c) 2016 Tomasz Jakub Rup
+  Copyright (c) 2017 Tomasz Jakub Rup
 
   https://github.com/tomi77/backbone-forms-chosen
 
