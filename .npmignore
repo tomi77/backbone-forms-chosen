@@ -45,3 +45,6 @@ coffeelint.json
 src
 docs
 demo
+bower_components
+bower.json
+karma.conf.coffee

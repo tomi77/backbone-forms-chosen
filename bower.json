@@ -19,7 +19,9 @@
     "docs",
     "demo",
     "spec",
-    "features"
+    "features",
+    "package.json",
+    "karma.conf.coffee"
   ],
   "dependencies": {
     "backbone-forms": "^0.14.1",
