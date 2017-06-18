@@ -18,7 +18,8 @@
     "src",
     "docs",
     "demo",
-    "spec"
+    "spec",
+    "features"
   ],
   "dependencies": {
     "backbone-forms": "^0.14.1",
