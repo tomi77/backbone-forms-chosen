@@ -3,7 +3,7 @@ seleniumWebdriver = require 'selenium-webdriver'
 
 Until = seleniumWebdriver.until
 
-defineSupportCode ({Given, When, Then}) ->
+defineSupportCode ({Then}) ->
   Then 'I should see chosen editor', () ->
     condition = Until.elementLocated css: '.chosen-container'
     @driver.wait(condition)

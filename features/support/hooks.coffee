@@ -1,4 +1,4 @@
 {defineSupportCode} = require('cucumber')
 
-defineSupportCode ({After, Before}) ->
+defineSupportCode ({After}) ->
   After () -> @driver.quit()

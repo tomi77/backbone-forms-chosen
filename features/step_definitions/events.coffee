@@ -4,7 +4,7 @@ seleniumWebdriver = require 'selenium-webdriver'
 Until = seleniumWebdriver.until
 {By, WebElementCondition, Condition} = seleniumWebdriver
 
-defineSupportCode ({Given, When, Then}) ->
+defineSupportCode ({When, Then}) ->
   When 'Click on the editor', () ->
     @driver.findElement css: '.chosen-container'
     .then (element) -> element.click()
