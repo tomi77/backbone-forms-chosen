@@ -38,21 +38,25 @@
       }
     },
     initialize: function(options) {
-      var base, el;
+      var el;
       Select.prototype.initialize.call(this, options);
       this.editorOptions = options.schema.editorOptions || {};
       el = this.$el;
       this.$el = Backbone.$('<div>');
       this.el = this.$el[0];
       this.$el.html(el);
-      if ((base = this.editorOptions).width == null) {
-        base.width = el.css('width');
-      }
     },
     render: function() {
       Select.prototype.render.call(this);
-      this.$('select').chosen(this.editorOptions);
+      if (this.editorOptions.width != null) {
+        this.renderChosen();
+      } else {
+        setTimeout(this.renderChosen.bind(this), 10);
+      }
       return this;
+    },
+    renderChosen: function() {
+      this.$('select').chosen(this.editorOptions);
     },
     renderOptions: function(options) {
       var $select, html;

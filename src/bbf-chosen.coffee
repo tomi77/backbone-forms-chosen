@@ -1,5 +1,5 @@
 ###
-  Backbone-Forms chosen editor 1.0.0
+  Backbone-Forms chosen editor 1.0.1
 
   Copyright (c) 2017 Tomasz Jakub Rup
 
@@ -44,15 +44,20 @@
       @el = @$el[0]
       @$el.html(el)
 
-      @editorOptions.width ?= el.css('width')
-
       return
 
     render: () ->
       Select::render.call @
 
-      @$('select').chosen @editorOptions
+      if @editorOptions.width?
+        @renderChosen()
+      else
+        setTimeout @renderChosen.bind(@), 10
       @
+
+    renderChosen: () ->
+      @$('select').chosen @editorOptions
+      return
 
     renderOptions: (options) ->
       $select = @$('select')

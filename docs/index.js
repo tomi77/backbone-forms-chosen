@@ -12,9 +12,6 @@ demo = function() {
         editorAttrs: {
           multiple: 'multiple',
           'data-placeholder': 'Select countries...'
-        },
-        editorOptions: {
-          width: '100%'
         }
       }
     }
