@@ -4,7 +4,8 @@
   "main": "bbf-chosen.js",
   "keywords": [
     "backbone-forms",
-    "chosen"
+    "chosen",
+    "editor"
   ],
   "authors": [
     "Tomasz Jakub Rup"

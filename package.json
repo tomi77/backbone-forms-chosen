@@ -2,6 +2,11 @@
   "name": "backbone-forms-chosen",
   "version": "1.0.2",
   "description": "Backbone-Forms chosen editor",
+  "keywords": [
+    "backbone-forms",
+    "chosen",
+    "editor"
+  ],
   "dependencies": {
     "backbone-forms": "^0.14.1",
     "chosen-js": "^1.7.0"
