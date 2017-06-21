@@ -48,3 +48,4 @@ demo
 bower_components
 bower.json
 karma.conf.coffee
+*.min.js
