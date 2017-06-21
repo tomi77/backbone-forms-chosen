@@ -18,6 +18,8 @@ Model = Backbone.Model.extend
       editorAttrs:
         multiple: 'multiple'
         'data-placeholder': 'Select countries...'
+      editorOptions:
+        width: '400px'
 
 describe 'A Chosen editor', () ->
   it 'should render a chosen select box', () ->

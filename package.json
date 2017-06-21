@@ -29,7 +29,7 @@
     "uglify-js": "^3.0.16"
   },
   "scripts": {
-    "test": "karma start",
+    "test": "karma start && npm run cucumber",
     "cucumber": "cucumber.js --compiler coffee:coffee-script/register",
     "coveralls": "npm test && cat ./coverage/lcov.info | coveralls",
     "build": "npm run build-js; npm run uglify",
