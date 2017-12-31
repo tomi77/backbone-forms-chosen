@@ -5,6 +5,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/tomi77/backbone-forms-chosen/badge.svg?branch=master)](https://coveralls.io/github/tomi77/backbone-forms-chosen?branch=master)
 [![Dependency Status](https://david-dm.org/tomi77/backbone-forms-chosen.png)](https://david-dm.org/tomi77/backbone-forms-chosen)
 [![devDependencies Status](https://david-dm.org/tomi77/backbone-forms-chosen/dev-status.svg)](https://david-dm.org/tomi77/backbone-forms-chosen?type=dev)
+[![peerDependencies Status](https://david-dm.org/tomi77/backbone-forms-chosen/peer-status.svg)](https://david-dm.org/tomi77/backbone-forms-chosen?type=peer)
 ![Downloads](https://img.shields.io/npm/dt/backbone-forms-chosen.svg)
 
 A [Backbone-Forms](https://github.com/powmedia/backbone-forms) editor that covers [Chosen](https://harvesthq.github.io/chosen/) functionality.
