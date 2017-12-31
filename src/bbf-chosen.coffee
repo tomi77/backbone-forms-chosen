@@ -1,5 +1,5 @@
 ###
-  Backbone-Forms chosen editor 1.0.2
+  Backbone-Forms chosen editor 1.0.3
 
   Copyright (c) 2017 Tomasz Jakub Rup
 
